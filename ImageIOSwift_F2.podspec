@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name             = 'ImageIOSwift.F2'
-  s.version          = '0.6.1'
+  s.name             = 'ImageIOSwift_F2'
+  s.version          = '0.6.2'
   s.summary          = 'Swift wrapper around ImageIO.'
 
   s.description      = <<-DESC
@@ -11,10 +11,10 @@ Pod::Spec.new do |s|
   While there are alternatives that provide many of the same features, and many of them use very similar implimentations based on `ImageIO`, this project provides a unified interface for all uses of ImageIO. So for instance you can use the same view and image processing code for animated images, progressive jpegs, and any other format that ImageIO supports.
                        DESC
 
-  s.homepage         = 'https://github.com/dragonetail/ImageIOSwift.F2'
+  s.homepage         = 'https://github.com/dragonetail/ImageIOSwift_F2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'davbeck' => 'dragonetail@gmail.com' }
-  s.source           = { :git => 'https://github.com/dragonetail/ImageIOSwift.F2.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dragonetail/ImageIOSwift_F2.git', :tag => s.version.to_s }
   s.social_media_url = 'http://dragonetail.github.io/'
 
   s.ios.deployment_target = '9.0'

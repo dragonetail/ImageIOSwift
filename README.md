@@ -7,6 +7,9 @@
 
 ```
 Updated to swift 4.2 by dragonetail, forked from https://github.com/davbeck/ImageIOSwift.
+
+Pls use this to install.
+pod 'ImageIOSwift_F2'
 ```
 
 [ImageIO](https://developer.apple.com/documentation/imageio) is an Apple framework that provides low level access to image files and is what powers UIImage and other image related operations on iOS and macOS. However, in part because it is a C/Core Foundation framework, using it can be difficult.
