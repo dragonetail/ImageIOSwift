@@ -42,8 +42,22 @@ class MetricsViewController: ImageSourceViewController {
 		// TODO: add http based incremental load handling
 		
 		var start = Date()
+		
+		print(url)
+		start = Date()
+		let _ = UIImage(contentsOfFile: url.absoluteString)
+		let thirdCreateImageDuration = -start.timeIntervalSinceNow
+		
+		start = Date()
+		let data = NSData(contentsOf: url)
+		imageView.image = UIImage(data: data! as Data)
+		let forthCreateImageDuration = -start.timeIntervalSinceNow
+		
+		start = Date()
 		let imageSource = ImageSource(url: url)
 		let createSourceDuration = -start.timeIntervalSinceNow
+		
+		
 		
 		start = Date()
 		guard let size = imageSource?.properties(at: 0)?.imageSize else { return }
@@ -76,6 +90,8 @@ class MetricsViewController: ImageSourceViewController {
 		start = Date()
 		_ = imageSource?.cgImage(at: 0)
 		let secondCreateImageDuration = -start.timeIntervalSinceNow
+
+		
 		
 		UIGraphicsBeginImageContextWithOptions(size, true, 1)
 		start = Date()
@@ -98,7 +114,11 @@ class MetricsViewController: ImageSourceViewController {
 		
 		sourceTimeLabel.text = "\(String(format: "%.4f", createSourceDuration))s"
 		sizeTimeLabel.text = "\(String(format: "%.4f", sizeDuration))s"
-		imageTimeLabel.text = "\(String(format: "%.4f", createImageDuration))s, \(String(format: "%.4f", secondCreateImageDuration))s"
+		imageTimeLabel.text = "\(String(format: "%.4f", createImageDuration))s, \(String(format: "%.4f", secondCreateImageDuration))s, \(String(format: "%.4f", thirdCreateImageDuration))s, \(String(format: "%.4f", forthCreateImageDuration))s"
+		print(sourceTimeLabel.text ?? "")
+		print(imageTimeLabel.text ?? "")
+		
+		
 		drawTimeLabel.text = "\(String(format: "%.4f", drawDuration))s, \(String(format: "%.4f", secondDrawDuration))s"
 		uiImageTimeLabel.text = "\(String(format: "%.4f", uiImageDrawTime))s"
 		
