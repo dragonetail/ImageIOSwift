@@ -230,6 +230,22 @@ public struct ImageSource {
 		
 		return ImageProperties(rawValue: rawValue)
 	}
+    
+    
+    public func codableProperties(options: ImageOptions? = nil) -> CodableImageProperties? {
+        guard let rawValue = CGImageSourceCopyProperties(cgImageSource, options?.rawValue) as? [CFString:Any] else { return nil }
+        
+        return CodableImageProperties(rawValue: rawValue)
+    }
+    
+    public func codableProperties(at index: Int, options: ImageOptions? = nil) -> CodableImageProperties? {
+        guard let rawValue = CGImageSourceCopyPropertiesAtIndex(cgImageSource, index, options?.rawValue) as? [CFString:Any] else { return nil }
+        
+        return CodableImageProperties(rawValue: rawValue)
+    }
+    
+    
+    
 }
 
 

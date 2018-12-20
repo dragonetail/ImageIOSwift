@@ -122,6 +122,11 @@ class MetricsViewController: ImageSourceViewController {
 		drawTimeLabel.text = "\(String(format: "%.4f", drawDuration))s, \(String(format: "%.4f", secondDrawDuration))s"
 		uiImageTimeLabel.text = "\(String(format: "%.4f", uiImageDrawTime))s"
 		
+		
+		imageSource?.codableProperties()
+		print("~~~~~~~~~~~~~")
+		imageSource?.codableProperties(at: 0)
+		
 		self.imageSource = imageSource
 	}
 }
