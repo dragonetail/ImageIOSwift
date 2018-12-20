@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double ImageIOSwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char ImageIOSwiftVersionString[];
+FOUNDATION_EXPORT double ImageIOSwift_F2VersionNumber;
+FOUNDATION_EXPORT const unsigned char ImageIOSwift_F2VersionString[];
 

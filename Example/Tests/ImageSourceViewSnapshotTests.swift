@@ -1,6 +1,6 @@
 import XCTest
 import FBSnapshotTestCase
-import ImageIOSwift
+import ImageIOSwift_F2
 
 
 class ImageSourceViewSnapshotTests: FBSnapshotTestCase {

@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## ImageIOSwift
+## ImageIOSwift_F2
 
 Copyright (c) 2017 thecitydeployer <code@davidbeck.co>
 

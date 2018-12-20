@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ImageIOSwift
+import ImageIOSwift_F2
 
 
 func local(named name: String) -> URL? {

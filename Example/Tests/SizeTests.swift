@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import ImageIOSwift
+import ImageIOSwift_F2
 
 class SizeTests: XCTestCase {
     // MARK: - Tests

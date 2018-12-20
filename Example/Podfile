@@ -2,7 +2,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'ImageIOSwift_Example' do
-  pod 'ImageIOSwift', :path => '../'
+  pod 'ImageIOSwift_F2', :path => '../'
 
   target 'ImageIOSwift_Tests' do
     inherit! :search_paths
